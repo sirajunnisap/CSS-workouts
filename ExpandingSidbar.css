@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+}
+#grid{
+    height: 50vh;
+}
+
+#left{
+    background-color: teal;
+}
+#right{
+    background-color: cornsilk;
+    border: 3rem solid rgb(0 0 0 / 10%);
+}
+/* #grid{
+    display: grid;
+    grid-template-columns: 48px auto;
+    transition: 300ms;
+}
+
+#grid:has(#left:hover){
+    grid-template-columns: 30% auto;
+}
+ */
+
+#grid{
+    display: grid;
+    grid-template-columns: var(--left, 48px) 1fr;
+    transition: 500ms;
+}
+
+#grid:has(#left:hover){
+    --left:30%;
+}
+
+
+#grid2{
+    transition: 500ms;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: crimson;
+    display: grid;
+    gap: 3px;
+    height: 50vh;
+}
+
+:where(.left,.center,.right){
+    background: navajowhite;
+    transition: 300ms;
+}
+
+:where(.left,.center,.right):hover{
+    background: crimson;
+}
+
+#grid2:has(.left:hover){
+    grid-template-columns: 2fr 0.5fr 0.5fr;
+}
+#grid2:has(.center:hover){
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+}
+#grid2:has(.right:hover){
+    grid-template-columns: 0.5fr 0.5fr 2fr;
+}
+
+
+#grid3{
+    display: grid;
+    transition: 500ms;
+    grid-template-columns: 1fr 1fr 0fr;
+    height: 50vh;
+    background: navajowhite;
+}
+
+#grid3:hover{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.column{
+    outline: 1.5px solid rgb(0 0 0 / 10%);
+}

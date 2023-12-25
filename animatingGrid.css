@@ -1,0 +1,22 @@
+.grid {
+    color: #00B9E8;
+    display:grid;
+}
+.left {
+    color: #5D8AA8;
+}
+.right {
+    color: #6CB4EE;
+}
+
+div {
+    background-color: #7890fb;
+    padding: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
